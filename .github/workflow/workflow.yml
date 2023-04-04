@@ -1,27 +1,8 @@
-name: Hellow World
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
-
+name: hello-world
+on: push
 jobs:
-  hello:
+  my-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: hello world
-        run: echo "hellow world"
-        shell: bash
-  hello-dipen:
-    runs-on: ubuntu-latest
-    steps:
-      - name: hello dipen
-        run: echo "hellow dipen"
-        shell: bash
-  
-
+      - name: my-step
+        run: echo "Hello World!"
